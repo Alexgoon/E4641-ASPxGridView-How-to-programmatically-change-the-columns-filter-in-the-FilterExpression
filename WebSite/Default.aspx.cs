@@ -9,6 +9,8 @@ public partial class _Default : System.Web.UI.Page {
     protected void ASPxGridView1_CustomCallback(object sender, ASPxGridViewCustomCallbackEventArgs e) {
         ASPxGridView grid = sender as ASPxGridView;
         ModifyFilterExpression(ASPxComboBox1.Value.ToString(), ASPxTextBox1.Value, grid);
+        int t=4;
+        t++;
     }
     protected void ModifyFilterExpression(string FieldName, object value, ASPxGridView victim) {
         var criterias = CriteriaColumnAffinityResolver.SplitByColumns(CriteriaOperator.Parse(victim.FilterExpression));
